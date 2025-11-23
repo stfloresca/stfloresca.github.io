@@ -1,64 +1,72 @@
-/* Description: Custom JS file */
-
+/* =============================================
+   Steven Floresca - Personal Portfolio
+   Custom JavaScript
+   ============================================= */
 
 (function($) {
-    "use strict"; 
-	
-    /* Navbar Scripts */
-    // jQuery to collapse the navbar on scroll
+    "use strict";
+
+    // Navbar scroll effect
     $(window).on('scroll load', function() {
-		if ($(".navbar").offset().top > 60) {
-			$(".fixed-top").addClass("top-nav-collapse");
-		} else {
-			$(".fixed-top").removeClass("top-nav-collapse");
-		}
-    });
-    
-	// jQuery for page scrolling feature - requires jQuery Easing plugin
-	$(function() {
-		$(document).on('click', 'a.page-scroll', function(event) {
-			var $anchor = $(this);
-			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
-			}, 600, 'easeInOutExpo');
-			event.preventDefault();
-		});
+        if ($(".navbar").offset().top > 60) {
+            $(".fixed-top").addClass("top-nav-collapse");
+        } else {
+            $(".fixed-top").removeClass("top-nav-collapse");
+        }
     });
 
-    // offcanvas script from Bootstrap + added element to close menu on click in small viewport
-    $('[data-toggle="offcanvas"], .navbar-nav li a:not(.dropdown-toggle').on('click', function () {
-        $('.offcanvas-collapse').toggleClass('open')
-    })
+    // Smooth scrolling for page navigation
+    $(function() {
+        $(document).on('click', 'a.page-scroll', function(event) {
+            var $anchor = $(this);
+            var target = $($anchor.attr('href'));
+            if (target.length) {
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top - 70
+                }, 600, 'easeInOutExpo');
+                event.preventDefault();
+            }
+        });
+    });
 
-    // hover in desktop mode
-    function toggleDropdown (e) {
+    // Hamburger menu toggle
+    $('[data-toggle="offcanvas"]').on('click', function() {
+        $('.offcanvas-collapse').toggleClass('open');
+        $(this).toggleClass('active');
+    });
+
+    // Close mobile menu when clicking a nav link
+    $('.navbar-nav li a:not(.dropdown-toggle)').on('click', function() {
+        $('.offcanvas-collapse').removeClass('open');
+        $('.hamburger-menu').removeClass('active');
+    });
+
+    // Dropdown hover for desktop
+    function toggleDropdown(e) {
         const _d = $(e.target).closest('.dropdown'),
             _m = $('.dropdown-menu', _d);
-        setTimeout(function(){
+        setTimeout(function() {
             const shouldOpen = e.type !== 'click' && _d.is(':hover');
             _m.toggleClass('show', shouldOpen);
             _d.toggleClass('show', shouldOpen);
             $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
         }, e.type === 'mouseleave' ? 300 : 0);
     }
+
     $('body')
-    .on('mouseenter mouseleave','.dropdown',toggleDropdown)
-    .on('click', '.dropdown-menu a', toggleDropdown);
+        .on('mouseenter mouseleave', '.dropdown', toggleDropdown)
+        .on('click', '.dropdown-menu a', toggleDropdown);
 
+    // Form field animations
+    $("input, textarea").on('keyup blur', function() {
+        if ($(this).val() !== '') {
+            $(this).addClass('notEmpty');
+        } else {
+            $(this).removeClass('notEmpty');
+        }
+    });
 
-    /* Move Form Fields Label When User Types */
-    // for input and textarea fields
-    $("input, textarea").keyup(function(){
-		if ($(this).val() != '') {
-			$(this).addClass('notEmpty');
-		} else {
-			$(this).removeClass('notEmpty');
-		}
-	});
-	
-
-    /* Back To Top Button */
-    // create the back to top button
+    // Back to top button
     $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
     var amountScrolled = 700;
     $(window).scroll(function() {
@@ -69,10 +77,57 @@
         }
     });
 
+    // Remove focus on buttons after click
+    $(".button, a, button").mouseup(function() {
+        $(this).blur();
+    });
 
-	/* Removes Long Focus On Buttons */
-	$(".button, a, button").mouseup(function() {
-		$(this).blur();
-	});
+    // Close mobile menu when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.navbar').length) {
+            $('.offcanvas-collapse').removeClass('open');
+            $('.hamburger-menu').removeClass('active');
+        }
+    });
+
+    // Add active class to nav items on scroll
+    $(window).on('scroll', function() {
+        var scrollPos = $(document).scrollTop() + 100;
+
+        $('.navbar-nav a.page-scroll').each(function() {
+            var href = $(this).attr('href');
+            if (href.charAt(0) === '#') {
+                var target = $(href);
+                if (target.length) {
+                    if (target.offset().top <= scrollPos && target.offset().top + target.outerHeight() > scrollPos) {
+                        $('.navbar-nav a.page-scroll').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                }
+            }
+        });
+    });
+
+    // Intersection Observer for scroll animations
+    if ('IntersectionObserver' in window) {
+        const animateOnScroll = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                    animateOnScroll.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe elements that should animate
+        document.querySelectorAll('.cert-card, .company-card, .testimonial-card, .profile-link-item, .writeup-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            animateOnScroll.observe(el);
+        });
+    }
 
 })(jQuery);

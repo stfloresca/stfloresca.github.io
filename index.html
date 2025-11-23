@@ -4,40 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-	<meta property="og:site_name" content="Steve Personal Website" /> <!-- website name -->
-	<meta property="og:site" content="stfloresca.com" /> <!-- website link -->
-	<meta property="og:title" content="Meepmerp"/> <!-- title shown in the actual shared post -->
+    <!-- OG Meta Tags -->
+    <meta property="og:site_name" content="Steven Floresca - Security Researcher" />
+    <meta property="og:site" content="stfloresca.github.io" />
+    <meta property="og:title" content="MEEPMERP - Offensive Security Professional"/>
+    <meta property="og:description" content="Offensive Security Officer, Bug Bounty Hunter, and Penetration Tester"/>
 
     <!-- Webpage Title -->
-    <title>Steven Floresca</title>
-    
+    <title>Steven Floresca | MEEPMERP</title>
+
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-	
-	<!-- Favicon  -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" href="images/3.png">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
-    
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
-            
-            <!-- Image Logo -->
-            <a class="nav-item social-icons" href="index.html"><img src="images/3.png"width="50" height="50"></a>  
-            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-                <span class="navbar-toggler-icon"></span>
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="images/3.png" alt="Logo" class="nav-logo">
+            </a>
+
+            <!-- Custom Hamburger Menu -->
+            <button class="hamburger-menu" type="button" data-toggle="offcanvas" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
             </button>
 
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="#header">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#about">About</a>
@@ -50,367 +56,456 @@
                     </li>
                 </ul>
                 <span class="nav-item social-icons">
-                    <span class="fa-stack">
-                        <a href="https://www.facebook.com/swagger.json">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-facebook-f fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="https://x.com/meepmerp_PH">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-twitter fa-stack-1x"></i>
-                        </a>
-                    </span>
+                    <a href="https://www.facebook.com/swagger.json" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/meepmerp_PH" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
                 </span>
-            </div> <!-- end of navbar-collapse -->
-        </div> <!-- end of container -->
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+            </div>
+        </div>
+    </nav>
 
-
-    <!-- Header -->
-    <header id="header" class="header">
+    <!-- Hero Section -->
+    <header id="header" class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                         <img src="images/meepmerp.png">
-                        <h1 style="color:white;">HACKER | PENTESTER | SECURITY RESEARCHER</h1>
-                        <p style="color:white;">By day, I am an Offensive Security Officer; by night, a dedicated Bug Bounty Hunter</p>
-                        <a class="btn-solid-lg page-scroll" href="#about">$~:whoami</a>
-                        <a class="btn-outline-lg page-scroll" href="#contact"><i class="fas fa-user"></i>Contact Me</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </header> <!-- end of header -->
-    <!-- end of header -->
+                <div class="col-lg-8">
+                    <div class="hero-content">
+                        <div class="glitch-wrapper">
+                            <h1 class="hero-title glitch" data-text="MEEPMERP">MEEPMERP</h1>
+                        </div>
+                        <div class="hero-subtitle">
+                            <span class="typing-text">HACKER</span>
+                            <span class="separator">|</span>
+                            <span class="typing-text">PENTESTER</span>
+                            <span class="separator">|</span>
+                            <span class="typing-text">SECURITY RESEARCHER</span>
+                        </div>
+                        <p class="hero-description">By day, I am an Offensive Security Officer; by night, a dedicated Bug Bounty Hunter</p>
+                        <div class="hero-buttons">
+                            <a class="btn-primary-custom page-scroll" href="#about">
+                                <span class="btn-text">$~whoami</span>
+                            </a>
+                            <a class="btn-secondary-custom page-scroll" href="#contact">
+                                <i class="fas fa-user"></i>
+                                <span>Contact Me</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <!-- Profile Info -->
+            <div class="row mb-5">
+                <div class="col-lg-5">
+                    <div class="profile-card">
+                        <h2 class="profile-name">Steven Floresca</h2>
+                        <span class="profile-aka">A.K.A</span>
+                        <h1 class="profile-alias">MEEPMERP</h1>
+                        <p class="profile-bio">With 7 years of experience in Information Security, I specialize in Offensive Security, particularly in Web Application, Network, Mobile, and API Penetration Testing. I hold a certificate in Web Application Penetration Testing and Ethical Hacking from the <strong>Global Information Assurance Certification (GIAC)</strong>, demonstrating my commitment to staying at the forefront of Information Security.</p>
+                        <p class="profile-bio">Beyond my technical expertise, I am an avid coder, gamer, traveler, and photographer, combining analytical skills with creativity and a love for exploration.</p>
+                    </div>
+                </div>
 
-    <!-- About-->
-    <div id="about" class="basic-1 bg-gray">
+                <!-- Certifications Grid -->
+                <div class="col-lg-7">
+                    <div class="certs-grid">
+                        <!-- GWAPT -->
+                        <div class="cert-card">
+                            <a href="https://www.sans.org/cyber-security-courses/web-app-penetration-testing-ethical-hacking/" class="cert-link">
+                                <span class="cert-title">GIAC Web Application Penetration Tester (GWAPT)</span>
+                            </a>
+                            <div class="cert-badge">
+                                <img src="https://images.credly.com/size/340x340/images/f535241f-edd3-4dd2-93fd-2243dbc0826e/image.png" alt="GWAPT Badge">
+                            </div>
+                            <p class="cert-description">The Global Information Assurance Certification (GIAC) program is a leading provider and developer of Cyber Security Certifications.</p>
+                            <a class="cert-verify-btn" href="https://www.credly.com/badges/1a5d3010-53b8-4fe6-ade9-7bcf0bb074d8/linked_in_profile">Authenticate</a>
+                        </div>
+
+                        <!-- CAPen -->
+                        <div class="cert-card">
+                            <a href="https://secops.group/product/certified-appsec-pentester/" class="cert-link">
+                                <span class="cert-title">SecOps Group Certified AppSec Pentester (CAPen)</span>
+                            </a>
+                            <div class="cert-badge">
+                                <img src="https://pbs.twimg.com/media/Fmqlso6aAAAq21g.png" alt="CAPen Badge">
+                            </div>
+                            <span class="cert-merit">Awarded with MERIT Score</span>
+                            <p class="cert-description">Certification created by The SecOps Group. Candidates have to prove their knowledge on application pentesting in practical exam.</p>
+                            <a class="cert-verify-btn" href="https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXbT4QdB5o91LpQ/Yi+17iUNpBJwCNeww2V362j/G8NBUjXQhzew7hHew3PqBTqUUzmGJ1gQtHnFVShdIakjav4A=">Authenticate</a>
+                        </div>
+
+                        <!-- SANS Coin -->
+                        <div class="cert-card">
+                            <a href="https://www.sans.org/mlp/challenge-coins/" class="cert-link">
+                                <span class="cert-title">SANS542 GIAC Coin Holder</span>
+                            </a>
+                            <div class="cert-badge">
+                                <img src="https://images.contentstack.io/v3/assets/blt36c2e63521272fdc/blteff42d49ed7613f5/6644a9cbdc0b2e489c4fdc63/Coins_Web_340x340_37.png" alt="SANS Coin Badge">
+                            </div>
+                            <p class="cert-description">SANS Challenge Coins: The Ultimate Recognition to Elite Cybersecurity Professionals</p>
+                            <a class="cert-verify-btn" href="https://www.linkedin.com/feed/update/urn:li:activity:6969281941170794497/">Authenticate</a>
+                        </div>
+
+                        <!-- CNPen -->
+                        <div class="cert-card">
+                            <a href="https://secops.group/product/certified-network-pentester/" class="cert-link">
+                                <span class="cert-title">SecOps Group Certified Network Pentester (CNPen)</span>
+                            </a>
+                            <div class="cert-badge">
+                                <img src="https://secops.group/wp-content/uploads/2023/02/certified-network-pentester.png" alt="CNPen Badge">
+                            </div>
+                            <span class="cert-merit">Awarded with MERIT Score</span>
+                            <p class="cert-description">Intermediate-level exam to test candidate's knowledge on core concepts of network security and practical pentest skills.</p>
+                            <a class="cert-verify-btn" href="https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXfUqk7Oo+F3uylfgpnCOvbrPIcDcdfYtign0AAGrbtZG3reVZOGSYEKry+SVQgZzzvUZ8qfJv6+OhUp9D02MM7s=">Authenticate</a>
+                        </div>
+
+                        <!-- Coming Soon Placeholder -->
+                        <div class="cert-card coming-soon">
+                            <div class="coming-soon-content">
+                                <i class="fas fa-certificate coming-soon-icon"></i>
+                                <span class="coming-soon-text">Coming Soon</span>
+                                <p class="coming-soon-desc">New certification in progress</p>
+                            </div>
+                        </div>
+
+                        <!-- Another Coming Soon Placeholder -->
+                        <div class="cert-card coming-soon">
+                            <div class="coming-soon-content">
+                                <i class="fas fa-award coming-soon-icon"></i>
+                                <span class="coming-soon-text">Coming Soon</span>
+                                <p class="coming-soon-desc">Stay tuned for updates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievement Banner -->
+            <div class="achievement-banner">
+                <a href="https://hackerone.com/leaderboard/country?year=2020&owasp=a1&country=PH&assetType=WEB_APP&tab=all" class="achievement-link">
+                    <i class="fas fa-trophy"></i>
+                    <span>HackerOne Top Hacker with the Highest Impact in the Philippines 2020</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profiles & Writeups Section -->
+    <section class="profiles-section">
         <div class="container">
             <div class="row">
+                <!-- Left: Profile Links -->
                 <div class="col-lg-4">
-                    <div class="text-container first">
-                        <h2>Steven Floresca</h2>
-                        <h6>A.K.A</h6>
-                        <h1 class="h1-large">MEEPMERP</h1>
-                        <p>With 7 years of experience in Information Security, I specialize in Offensive Security, particularly in Web Application, Network, Mobile, and API Penetration Testing. I hold a certificate in Web Application Penetration Testing and Ethical Hacking from the <b>Global Information Assurance Certification (GIAC)</b>, demonstrating my commitment to staying at the forefront of Information Security.</p><p>Beyond my technical expertise, I am an avid coder, gamer, traveler, and photographer, combining analytical skills with creativity and a love for exploration.</p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-container second">
-                        <a href="https://www.sans.org/cyber-security-courses/web-app-penetration-testing-ethical-hacking/"><div class="cert">GIAC Web Application Penetration Tester (GWAPT)</div></a>
-                        <img src="https://images.credly.com/size/340x340/images/f535241f-edd3-4dd2-93fd-2243dbc0826e/image.png"width="200" height="200">
-                        <p>The Global Information Assurance Certification (GIAC) program is a leading provider and developer of Cyber Security Certifications.</p>
-                        <a class="btn-solid-lg page-scroll" href="https://www.credly.com/badges/1a5d3010-53b8-4fe6-ade9-7bcf0bb074d8/linked_in_profile">Authenticate</a>
-                        <br><br>
-                        <a href="https://www.sans.org/mlp/challenge-coins/"><div class="cert">SANS542 GIAC Coin Holder</div></a>
-                       <img src="https://images.contentstack.io/v3/assets/blt36c2e63521272fdc/blteff42d49ed7613f5/6644a9cbdc0b2e489c4fdc63/Coins_Web_340x340_37.png"width="200" height="200">
-                        <p>SANS Challenge Coins: The Ultimate Recognition to Elite Cybersecurity Professionals</p>
-                        <a class="btn-solid-lg page-scroll" href="https://www.linkedin.com/feed/update/urn:li:activity:6969281941170794497/">Authenticate</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-container third">
-                        <a href="https://secops.group/product/certified-appsec-pentester/"><div class="cert">SecOps Group Certified AppSec Pentester (CAPen)</div></a>
-                        <img src="https://pbs.twimg.com/media/Fmqlso6aAAAq21g.png"width="200" height="200">
-			     <p>Awarded with MERIT Score</p>
-                        <p>Certification created by The SecOps Group. Candidates have to prove their knowledge on application pentesting in practical exam.</p>
-                        <a class="btn-solid-lg page-scroll" href="https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXbT4QdB5o91LpQ/Yi+17iUNpBJwCNeww2V362j/G8NBUjXQhzew7hHew3PqBTqUUzmGJ1gQtHnFVShdIakjav4A=">Authenticate</a>
-                        <br><br>
-                         <a href="https://secops.group/product/certified-network-pentester/"><div class="cert">SecOps Group Certified Network Pentester (CNPen)</div></a>
-                        <img src="https://secops.group/wp-content/uploads/2023/02/certified-network-pentester.png"width="200" height="200">
-			    <p>Awarded with MERIT Score</p>
-                        <p>Certification created by The SecOps Group. is an intermediate-level exam to test a candidate’s knowledge on the core concepts of network security. Candidates must be able to demonstrate practical knowledge to conduct an internal and external network pentest to pass this exam.</p>
-                        <a class="btn-solid-lg page-scroll" href="https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXfUqk7Oo+F3uylfgpnCOvbrPIcDcdfYtign0AAGrbtZG3reVZOGSYEKry+SVQgZzzvUZ8qfJv6+OhUp9D02MM7s=">Authenticate</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col --><br>
-            </div> <!-- end of row --><br><center><p class="p-heading"><b><a href="https://hackerone.com/leaderboard/country?year=2020&owasp=a1&country=PH&assetType=WEB_APP&tab=all">Hackerone Top Hacker with the highest Impact in the Philippines 2020</a></b></p></center>
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of about -->
-
-
-    <!-- Services -->
-    <div id="services" class="basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">Companies I’ve Hacked</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-		     <div class="col-lg-4">
-                    <div class="text-box">
-                        <center><img src="https://birkeland.uib.no/wp-content/uploads/2021/01/nasa-logo-web-rgb.png" width="200" height="100">
-                       <h4>NASA (National Aeronautics and Space Administration)</h4>
-                        <p>a globally recognized space agency responsible for pioneering space exploration, aeronautics research, and scientific discovery. As a key organization in aerospace innovation, NASA maintains high cybersecurity standards to protect its critical infrastructure and research. I had the privilege of contributing to their security by reporting a vulnerability, for which I received a Letter of Appreciation.</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-		    <div class="col-lg-4">
-                    <div class="text-box">
-                        <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/WHO_logo.svg/995px-WHO_logo.svg.png" width="100" height="100">
-                       <h4>World Health Organization (WHO)</h4>
-                        <p>a globally recognized agency dedicated to international public health and medical research. Given its role in managing health data and global pandemic response, cybersecurity is a critical aspect of its operations. I had the opportunity to contribute to WHO's cybersecurity by reporting a vulnerability, for which I received recognition.</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-		    <div class="col-lg-4">
-                    <div class="text-box">
-                        <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Seal_of_the_United_States_Department_of_Education.svg/1200px-Seal_of_the_United_States_Department_of_Education.svg.png" width="100" height="100">
-                       <h4>U.S Department of Education</h4>
-                        <p>plays a vital role in shaping federal education policies and securing sensitive student data across the country. As part of its cybersecurity efforts, the department actively works to protect financial aid systems, institutional networks, and student information. I had the privilege of contributing to its security by reporting a vulnerability, for which I received official recognition.</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-box">
-                        <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/640px-X_logo.jpg" width="100" height="100">
-                       <h4>X (Formerly Twitter)</h4>
-                        <p>X helps you create and share ideas and information instantly, without barriers.</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-box">
-                       <center><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png" width="100" height="100">
-                        <h4>STARBUCKS</h4>
-                        <p>A global coffee company that has been committed to ethically sourcing and roasting the highest quality arabica coffee since 1971.</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-box">
-                       <center><img src="https://1000logos.net/wp-content/uploads/2022/08/NordVPN-Logo-500x281.png" width="200" height="100">
-                        <h4>Nord VPN</h4>
-                        <p>The best VPN service for speed and security in 2025.</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-box">
-                       <center><img src="https://res.cloudinary.com/bw-com/image/upload/f_auto/v1/ctf/7rncvj1f8mw7/4979BKK2E1UAuehOSlBQIF/7a5a463a3c1c4a3e1931da9feaa737ca/bitwarden-og.png?_a=BAJFJtWIB" width="200" height="100">
-                        <h4>BITWARDEN</h4>
-                        <p>Open source password management solutions for individuals, teams, and business organizations.</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-box">
-                       <center><img src="https://www.aswatson.com/wp-content/uploads/2023/10/ASW-LOGO_PRIMARY_HORIZONTAL_RGB_RESIZE.png" width="170" height="50">
-                        <h4>A.S. Watson Group</h4>
-                        <p>AS Watson Group is the world's largest health and beauty retail group.</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-                 <div class="col-lg-4">
-                    <div class="text-box">
-                       <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXTwA2QNiq-X4Vvs5Xuq0m_nmfELSTn7AV3XGpPWyYigL6c6D8k5qvnD5SJ0DoVTJ4-j8&usqp=CAU" width="100" height="100">
-                        <h4>SMARTSHEET</h4>
-                        <p>Empower everyone to improve how they work.</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-box">
-                       <center><img src="https://logos-world.net/wp-content/uploads/2023/01/YouPorn-Logo.png" width="200" height="100">
-                        <h4>YOUPORN</h4>
-                        <p>For Adult Entertainment</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-box">
-                       <center><img src="https://appexchange.salesforce.com/partners/servlet/servlet.FileDownload?file=00P4V00000vlW2RUAU" width="100" height="100">
-                        <h4>FORMASSEMBLY</h4>
-                        <p>Create custom, branded web forms that convert with an intuitive, drag-and-drop form builder.</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-box">
-                       <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Pornhub-logo.svg/800px-Pornhub-logo.svg.png" width="200" height="100">
-                        <h4>PORNHUB</h4>
-                        <p>For Adult Entertainment</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row --> <p class="p-heading">Acknowledgments for contributions to private programs and more are kept confidential.</p>
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of services -->
-
-
-    <!-- Details -->
-	<div class="split">
-		<div class="area-1">
-		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space -->
-                            <div class="icons-container">
-                                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/hackerone_logo_icon_170042.png" alt="Hackerone">
-                                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github">
+                    <div class="profiles-card">
+                        <h3 class="section-title">Find Me On</h3>
+                        <div class="profile-links">
+                            <a href="https://hackerone.com/meepmerp" class="profile-link-item" target="_blank">
+                                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/hackerone_logo_icon_170042.png" alt="HackerOne">
+                                <span>HackerOne</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/stfloresca" class="profile-link-item" target="_blank">
+                                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+                                <span>GitHub</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://bugcrowd.com/meepmerp" class="profile-link-item" target="_blank">
                                 <img src="https://www.svgrepo.com/show/330097/bugcrowd.svg" alt="Bugcrowd">
-                                <a href="https://medium.com/@stevenfloresca"/><img src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png" alt="Medium"></a>
+                                <span>Bugcrowd</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://medium.com/@stevenfloresca" class="profile-link-item" target="_blank">
+                                <img src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png" alt="Medium">
+                                <span>Medium</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                            </div> <!-- end of icons-container -->
-                        </div> <!-- end of text-container -->
-                        <!-- end of text container -->
+                <!-- Right: Writeups -->
+                <div class="col-lg-8">
+                    <div class="writeups-card">
+                        <h3 class="section-title">Latest Writeups</h3>
+                        <div class="writeups-list">
+                            <!-- Writeup items - Add your Medium articles here -->
+                            <a href="https://medium.com/@stevenfloresca" class="writeup-item" target="_blank">
+                                <div class="writeup-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="writeup-content">
+                                    <h4>Security Research & Bug Bounty Writeups</h4>
+                                    <p>Read my latest findings and vulnerability disclosures on Medium</p>
+                                    <span class="writeup-platform">
+                                        <i class="fab fa-medium"></i> Medium
+                                    </span>
+                                </div>
+                                <i class="fas fa-arrow-right writeup-arrow"></i>
+                            </a>
 
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-		</div> <!-- end of area-2 -->
-    </div> <!-- end of split -->
-    <!-- end of details -->
+                            <!-- Placeholder for more writeups -->
+                            <div class="writeup-item placeholder-writeup">
+                                <div class="writeup-icon">
+                                    <i class="fas fa-pen-fancy"></i>
+                                </div>
+                                <div class="writeup-content">
+                                    <h4>More Writeups Coming Soon</h4>
+                                    <p>New security research articles will be published here</p>
+                                    <span class="writeup-platform">
+                                        <i class="fas fa-clock"></i> Stay Tuned
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Testimonials -->
-    <div class="cards-1">
+    <!-- Companies Section -->
+    <section id="services" class="companies-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">Endorsements from people who trust in my work.</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="testimonial-text">“During our time working together at ePLDT, I had the pleasure of witnessing Steven's exceptional adaptability and continuous pursuit of learning. His ability to quickly adapt to new situations and technologies, combined with his eagerness to learn and grow, made him a valuable asset to our team. Steven's dedication to staying ahead of the curve in the ever-evolving field of cybersecurity is truly commendable. I highly recommend Steven for any role that values flexibility and a passion for learning.”</p>
-                            <div class="details">
-                                <img src="https://media.istockphoto.com/id/1142192548/vector/man-avatar-profile-male-face-silhouette-or-icon-isolated-on-white-background-vector.jpg?s=612x612&w=0&k=20&c=DUKuRxK9OINHXt3_4m-GxraeoDDlhNuCbA9hp6FotFE=" alt="alternative">
-                                <div class="text">
-                                    <div class="testimonial-author">Lloyd Lexter G.</div>
-                                    <div class="occupation">Offensive Security Officer <br>PIPA | C-AI/MLPen | CPTA | eCTHP | Security+ | BTL1 | CRTO | CRTP | OSCP | eJPT</div>
-                                </div> <!-- end of text -->
-                            </div> <!-- end of testimonial-details -->
-                        </div>
+            <h2 class="section-heading">Companies I've Hacked</h2>
+            <p class="section-subheading">Contributing to security through responsible disclosure</p>
+
+            <div class="companies-grid">
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://birkeland.uib.no/wp-content/uploads/2021/01/nasa-logo-web-rgb.png" alt="NASA">
                     </div>
-                    <!-- end of card -->
+                    <h4>NASA</h4>
+                    <p>National Aeronautics and Space Administration - Received Letter of Appreciation for vulnerability disclosure.</p>
+                </div>
 
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="testimonial-text">“I had the privilege of working alongside Steven Floresca on a project focused on web application penetration testing, and I was truly amazed by his proficiency and knowledge in this field. Steven displayed an extensive grasp of web application vulnerabilities, successfully identifying and exploiting weaknesses that had been overlooked by others. His meticulousness and focus on detail were unparalleled, leading me to believe that he would be an invaluable addition to any organization seeking to bolster the security of their web applications. I wholeheartedly endorse Steven for any web application penetration testing endeavor.”</p>
-                            <div class="details">
-                                <img src="https://wallpapers.com/images/hd/anonymous-profile-silhouette-b714qekh29tu1anb.jpg" alt="alternative">
-                                <div class="text">
-                                    <div class="testimonial-author">Reymark Aguirre</div>
-                                    <div class="occupation">Penetration Tester <br> GIAC GPEN | CNPen | CAPen</div>
-                                </div> <!-- end of text -->
-                            </div> <!-- end of testimonial-details -->
-                        </div>
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/WHO_logo.svg/995px-WHO_logo.svg.png" alt="WHO">
                     </div>
-                    <!-- end of card -->
+                    <h4>World Health Organization</h4>
+                    <p>Global health agency - Received recognition for security contribution.</p>
+                </div>
 
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="testimonial-text">“I had the pleasure of working with Steven Floresca on a web application penetration testing project, and I was thoroughly impressed with their skills and expertise in this area. Steven demonstrated a deep understanding of web application vulnerabilities and was able to identify and exploit weaknesses that other testers had missed. Their thoroughness and attention to detail were second to none, and I believe they would be an asset to any organization looking to secure their web applications. I highly recommend Steven for any web application penetration testing project.”</p>
-                            <div class="details">
-                                <img src="https://media.istockphoto.com/id/1142192548/vector/man-avatar-profile-male-face-silhouette-or-icon-isolated-on-white-background-vector.jpg?s=612x612&w=0&k=20&c=DUKuRxK9OINHXt3_4m-GxraeoDDlhNuCbA9hp6FotFE=" alt="alternative">
-                                <div class="text">
-                                    <div class="testimonial-author">Alvin Aries T.</div>
-                                    <div class="occupation">Offensive Security Officer | OSCP | OSWP | GIAC GWAPT</div>
-                                </div> <!-- end of text -->
-                            </div> <!-- end of testimonial-details -->
-                        </div>
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Seal_of_the_United_States_Department_of_Education.svg/1200px-Seal_of_the_United_States_Department_of_Education.svg.png" alt="US DoE">
                     </div>
-                    <!-- end of card -->
+                    <h4>U.S Department of Education</h4>
+                    <p>Federal agency - Received official recognition for vulnerability report.</p>
+                </div>
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-1 -->
-    <!-- end of testimonials -->
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/640px-X_logo.jpg" alt="X">
+                    </div>
+                    <h4>X (Twitter)</h4>
+                    <p>Social media platform serving millions worldwide.</p>
+                </div>
 
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png" alt="Starbucks">
+                    </div>
+                    <h4>Starbucks</h4>
+                    <p>Global coffee company with high security standards.</p>
+                </div>
 
-    <!-- Section Divider -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <hr class="section-divider">
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-    <!-- end of section divider -->
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://1000logos.net/wp-content/uploads/2022/08/NordVPN-Logo-500x281.png" alt="NordVPN">
+                    </div>
+                    <h4>NordVPN</h4>
+                    <p>Leading VPN service for speed and security.</p>
+                </div>
 
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://res.cloudinary.com/bw-com/image/upload/f_auto/v1/ctf/7rncvj1f8mw7/4979BKK2E1UAuehOSlBQIF/7a5a463a3c1c4a3e1931da9feaa737ca/bitwarden-og.png" alt="Bitwarden">
+                    </div>
+                    <h4>Bitwarden</h4>
+                    <p>Open source password management solutions.</p>
+                </div>
 
-    <!-- Contact -->
-    <div id="contact" class="form-1 bg-gray">
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://www.aswatson.com/wp-content/uploads/2023/10/ASW-LOGO_PRIMARY_HORIZONTAL_RGB_RESIZE.png" alt="AS Watson">
+                    </div>
+                    <h4>A.S. Watson Group</h4>
+                    <p>World's largest health and beauty retail group.</p>
+                </div>
+
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXTwA2QNiq-X4Vvs5Xuq0m_nmfELSTn7AV3XGpPWyYigL6c6D8k5qvnD5SJ0DoVTJ4-j8&usqp=CAU" alt="Smartsheet">
+                    </div>
+                    <h4>Smartsheet</h4>
+                    <p>Enterprise work management platform.</p>
+                </div>
+
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://logos-world.net/wp-content/uploads/2023/01/YouPorn-Logo.png" alt="YouPorn">
+                    </div>
+                    <h4>YouPorn</h4>
+                    <p>Adult entertainment platform.</p>
+                </div>
+
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://appexchange.salesforce.com/partners/servlet/servlet.FileDownload?file=00P4V00000vlW2RUAU" alt="FormAssembly">
+                    </div>
+                    <h4>FormAssembly</h4>
+                    <p>Web form builder and data collection platform.</p>
+                </div>
+
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Pornhub-logo.svg/800px-Pornhub-logo.svg.png" alt="Pornhub">
+                    </div>
+                    <h4>Pornhub</h4>
+                    <p>Adult entertainment platform.</p>
+                </div>
+            </div>
+
+            <p class="companies-note">Acknowledgments for contributions to private programs and more are kept confidential.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Contact details</h2>
-                    <p class="p-heading">For any recommendation or collaboration please don't hesitate to get in touch with me. The fastest way is to send me your message using the following email <a class="blue no-line" href="#EmailMeHere">stfloresca@pm.me</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Contact Form -->
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Message</label>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">Submit</button>
-                        </div>
-                    </form>
-                    <!-- end of contact form -->
+            <h2 class="section-heading">Endorsements</h2>
+            <p class="section-subheading">From people who trust in my work</p>
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-1 -->  
-    <!-- end of contact -->
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"During our time working together at ePLDT, I had the pleasure of witnessing Steven's exceptional adaptability and continuous pursuit of learning. His ability to quickly adapt to new situations and technologies, combined with his eagerness to learn and grow, made him a valuable asset to our team. Steven's dedication to staying ahead of the curve in the ever-evolving field of cybersecurity is truly commendable."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>Lloyd Lexter G.</h5>
+                            <span>Offensive Security Officer</span>
+                            <small>PIPA | C-AI/MLPen | CPTA | eCTHP | Security+ | BTL1 | CRTO | CRTP | OSCP | eJPT</small>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"I had the privilege of working alongside Steven Floresca on a project focused on web application penetration testing, and I was truly amazed by his proficiency and knowledge in this field. Steven displayed an extensive grasp of web application vulnerabilities, successfully identifying and exploiting weaknesses that had been overlooked by others."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>Reymark Aguirre</h5>
+                            <span>Penetration Tester</span>
+                            <small>GIAC GPEN | CNPen | CAPen</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"I had the pleasure of working with Steven Floresca on a web application penetration testing project, and I was thoroughly impressed with their skills and expertise in this area. Steven demonstrated a deep understanding of web application vulnerabilities and was able to identify and exploit weaknesses that other testers had missed."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>Alvin Aries T.</h5>
+                            <span>Offensive Security Officer</span>
+                            <small>OSCP | OSWP | GIAC GWAPT</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-heading">Get In Touch</h2>
+            <p class="section-subheading">For recommendations or collaboration, don't hesitate to reach out</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:stfloresca@pm.me">stfloresca@pm.me</a>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="cname" placeholder=" " required>
+                            <label class="form-label" for="cname">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="cemail" placeholder=" " required>
+                            <label class="form-label" for="cemail">Email</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-textarea" id="cmessage" placeholder=" " required></textarea>
+                        <label class="form-label" for="cmessage">Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <div class="footer bg-gray">
+    <footer class="footer-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="social-container">
-                        <span class="fa-stack">
-                            <a href="https://www.facebook.com/swagger.json">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="https://x.com/meepmerp_PH">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div> <!-- end of social-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->  
-    <!-- end of footer -->
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/swagger.json" class="footer-social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/meepmerp_PH" class="footer-social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://github.com/stfloresca" class="footer-social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://medium.com/@stevenfloresca" class="footer-social-link">
+                        <i class="fab fa-medium"></i>
+                    </a>
+                </div>
+                <p class="footer-copyright">&copy; 2024 Steven Floresca. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-
-    <!-- Copyright -->
-    <div class="copyright bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Copyright © <a class="no-line" href="https://www.facebook.com/swagger.json">Steven Floresca</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-   </div> <!-- end of copyright --> 
-    <!-- end of copyright -->
-    
-    	
     <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
-
