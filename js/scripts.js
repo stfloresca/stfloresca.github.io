@@ -66,68 +66,6 @@
         }
     });
 
-    // Contact Form Submission Handler
-    $('#contactForm').on('submit', function(e) {
-        e.preventDefault();
-
-        var name = $('#cname').val().trim();
-        var email = $('#cemail').val().trim();
-        var message = $('#cmessage').val().trim();
-
-        // Validate fields
-        if (!name || !email || !message) {
-            showFormMessage('Please fill in all fields.', 'error');
-            return;
-        }
-
-        // Validate email format
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            showFormMessage('Please enter a valid email address.', 'error');
-            return;
-        }
-
-        // Create mailto link with form data
-        var subject = encodeURIComponent('Contact from ' + name + ' via Portfolio');
-        var body = encodeURIComponent(
-            'Name: ' + name + '\n' +
-            'Email: ' + email + '\n\n' +
-            'Message:\n' + message
-        );
-
-        var mailtoLink = 'mailto:meepmerp@wearehackerone.com?subject=' + subject + '&body=' + body;
-
-        // Open email client
-        window.location.href = mailtoLink;
-
-        // Show success message
-        showFormMessage('Opening your email client... Thank you for reaching out!', 'success');
-
-        // Reset form after delay
-        setTimeout(function() {
-            $('#contactForm')[0].reset();
-            $("input, textarea").removeClass('notEmpty');
-        }, 1000);
-    });
-
-    // Form message display function
-    function showFormMessage(message, type) {
-        // Remove existing message
-        $('.form-message').remove();
-
-        var messageClass = type === 'success' ? 'form-message-success' : 'form-message-error';
-        var messageHtml = '<div class="form-message ' + messageClass + '">' + message + '</div>';
-
-        $('#contactForm').prepend(messageHtml);
-
-        // Auto-hide after 5 seconds
-        setTimeout(function() {
-            $('.form-message').fadeOut(300, function() {
-                $(this).remove();
-            });
-        }, 5000);
-    }
-
     // Back to top button
     $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
     var amountScrolled = 700;
