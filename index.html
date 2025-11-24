@@ -21,23 +21,29 @@
     <link href="css/styles.css" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/3.png">
+    <link rel="icon" href="images/bug-icon.svg">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- YouTube Music Player (Hidden) -->
+    <div id="ytMusicPlayer" style="position: absolute; top: -9999px; left: -9999px;"></div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="index.html">
-                <img src="images/3.png" alt="Logo" class="nav-logo">
+                <img src="images/bug-icon.svg" alt="Logo" class="nav-logo">
             </a>
+
+            <!-- Music Toggle Button -->
+            <button id="musicToggle" class="music-toggle" type="button" aria-label="Toggle Music">
+                <i class="fas fa-volume-up" id="musicIcon"></i>
+            </button>
 
             <!-- Custom Hamburger Menu -->
             <button class="hamburger-menu" type="button" data-toggle="offcanvas" aria-label="Toggle navigation">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+                <img src="images/bug-icon.svg" alt="Menu" class="hamburger-icon">
             </button>
 
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
@@ -107,11 +113,21 @@
             <div class="row mb-5">
                 <div class="col-lg-5">
                     <div class="profile-card">
+                        <div class="profile-photo-wrapper">
+                            <img src="images/profile-photo.jpg" alt="Steven Floresca" class="profile-photo">
+                        </div>
                         <h2 class="profile-name">Steven Floresca</h2>
                         <span class="profile-aka">A.K.A</span>
                         <h1 class="profile-alias">MEEPMERP</h1>
-                        <p class="profile-bio">With 7 years of experience in Information Security, I specialize in Offensive Security, particularly in Web Application, Network, Mobile, and API Penetration Testing. I hold a certificate in Web Application Penetration Testing and Ethical Hacking from the <strong>Global Information Assurance Certification (GIAC)</strong>, demonstrating my commitment to staying at the forefront of Information Security.</p>
-                        <p class="profile-bio">Beyond my technical expertise, I am an avid coder, gamer, traveler, and photographer, combining analytical skills with creativity and a love for exploration.</p>
+                        <p class="profile-bio">With 7 years of experience in Information Security, I specialize in Offensive Security, with deep expertise across Web Application, Network, Mobile, and API Penetration Testing. My professional credentials include:</p>
+                        <ul class="profile-creds">
+                            <li>GIAC Web Application Penetration Testing and Ethical Hacking (GWAPT)</li>
+                            <li>Certified AppSec Pentester (CAPen)</li>
+                            <li>Certified Network Pentester (CNPen)</li>
+                            <li>Certified Red Team Analyst (CRTA)</li>
+                        </ul>
+                        <p class="profile-bio">My security research has led to successful vulnerability discoveries and responsible disclosures with major organizations including X (formerly Twitter), NASA, World Health Organization (WHO), United Nations (UN), Red Bull, Starbucks, NordVPN, Bitwarden, and various U.S. Department of Defense entities, among many other organizations.</p>
+                        <p class="profile-bio">Beyond my technical expertise in offensive security, I bring a multidisciplinary approach to problem-solving. I'm an avid coder, gamer, traveler, and photographer—combining analytical precision with creativity and a passion for exploration. This unique blend of technical depth and creative perspective allows me to approach security challenges from multiple angles and identify vulnerabilities others might miss.</p>
                     </div>
                 </div>
 
@@ -168,16 +184,20 @@
                             <a class="cert-verify-btn" href="https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXfUqk7Oo+F3uylfgpnCOvbrPIcDcdfYtign0AAGrbtZG3reVZOGSYEKry+SVQgZzzvUZ8qfJv6+OhUp9D02MM7s=">Authenticate</a>
                         </div>
 
-                        <!-- Coming Soon Placeholder -->
-                        <div class="cert-card coming-soon">
-                            <div class="coming-soon-content">
-                                <i class="fas fa-certificate coming-soon-icon"></i>
-                                <span class="coming-soon-text">Coming Soon</span>
-                                <p class="coming-soon-desc">New certification in progress</p>
+                        <!-- CRTA -->
+                        <div class="cert-card">
+                            <a href="https://cyberwarfare.live/product/red-team-analyst/" class="cert-link">
+                                <span class="cert-title">Certified Red Team Analyst (CRTA)</span>
+                            </a>
+                            <div class="cert-badge">
+                                <img src="https://cyberwarfare.live/wp-content/uploads/2022/12/CRTA-1.png" alt="CRTA Badge">
                             </div>
+                            <span class="cert-merit">100% Score Exam</span>
+                            <p class="cert-description">Certificate is earned by completing the CyberWarFare Labs Red Team Analyst Course and successfully passing the 6 hours practical examination.</p>
+                            <a class="cert-verify-btn" href="https://labs.cyberwarfare.live/credential/achievement/685e40710780c3f7d3b973e2">Authenticate</a>
                         </div>
 
-                        <!-- Another Coming Soon Placeholder -->
+                        <!-- Coming Soon Placeholder -->
                         <div class="cert-card coming-soon">
                             <div class="coming-soon-content">
                                 <i class="fas fa-award coming-soon-icon"></i>
@@ -237,8 +257,23 @@
                     <div class="writeups-card">
                         <h3 class="section-title">Latest Writeups</h3>
                         <div class="writeups-list">
-                            <!-- Writeup items - Add your Medium articles here -->
-                            <a href="https://medium.com/@stevenfloresca" class="writeup-item" target="_blank">
+                            <!-- Writeup 1 -->
+                            <a href="https://stevenfloresca.medium.com/global-cms-chaos-how-i-scored-a-15-000-bounty-across-two-programs-b535d1f0b888" class="writeup-item" target="_blank">
+                                <div class="writeup-icon">
+                                    <i class="fas fa-bug"></i>
+                                </div>
+                                <div class="writeup-content">
+                                    <h4>Global CMS Chaos: How I Scored a $15,000 Bounty Across Two Programs</h4>
+                                    <p>A detailed writeup on discovering critical vulnerabilities in a global CMS platform</p>
+                                    <span class="writeup-platform">
+                                        <i class="fab fa-medium"></i> Medium
+                                    </span>
+                                </div>
+                                <i class="fas fa-arrow-right writeup-arrow"></i>
+                            </a>
+
+                            <!-- Writeup 2 -->
+                            <a href="https://stevenfloresca.medium.com/global-cms-chaos-how-i-scored-a-15-000-bounty-across-two-programs-b535d1f0b888" class="writeup-item" target="_blank">
                                 <div class="writeup-icon">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
@@ -251,20 +286,6 @@
                                 </div>
                                 <i class="fas fa-arrow-right writeup-arrow"></i>
                             </a>
-
-                            <!-- Placeholder for more writeups -->
-                            <div class="writeup-item placeholder-writeup">
-                                <div class="writeup-icon">
-                                    <i class="fas fa-pen-fancy"></i>
-                                </div>
-                                <div class="writeup-content">
-                                    <h4>More Writeups Coming Soon</h4>
-                                    <p>New security research articles will be published here</p>
-                                    <span class="writeup-platform">
-                                        <i class="fas fa-clock"></i> Stay Tuned
-                                    </span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -325,6 +346,30 @@
                     </div>
                     <h4>NordVPN</h4>
                     <p>Leading VPN service for speed and security.</p>
+                </div>
+
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Red_Bull_logo.svg/1200px-Red_Bull_logo.svg.png" alt="Red Bull">
+                    </div>
+                    <h4>Red Bull</h4>
+                    <p>Red Bull is the most popular energy drink brand with a market share of 43%, and the third most valuable soft drink brand.</p>
+                </div>
+
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://www.igraal.com/images/logo-igraal.svg" alt="iGraal">
+                    </div>
+                    <h4>iGraal</h4>
+                    <p>Online cashback, deals and coupons platform founded in 2006, operating in France, Germany, Spain, and Poland.</p>
+                </div>
+
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/1200px-Coca-Cola_logo.svg.png" alt="Coca-Cola">
+                    </div>
+                    <h4>The Coca-Cola Company</h4>
+                    <p>American multinational corporation founded in 1892 that manufactures, sells and markets soft drinks worldwide.</p>
                 </div>
 
                 <div class="company-card">
@@ -414,7 +459,7 @@
                             <i class="fas fa-user-circle"></i>
                         </div>
                         <div class="author-info">
-                            <h5>Reymark Aguirre</h5>
+                            <h5>Reymark A.</h5>
                             <span>Penetration Tester</span>
                             <small>GIAC GPEN | CNPen | CAPen</small>
                         </div>
@@ -451,7 +496,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:stfloresca@pm.me">stfloresca@pm.me</a>
+                        <a href="mailto:meepmerp@wearehackerone.com">meepmerp@wearehackerone.com</a>
                     </div>
                 </div>
 

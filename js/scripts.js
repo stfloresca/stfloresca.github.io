@@ -130,4 +130,62 @@
         });
     }
 
+    // Music Toggle Functionality
+    var musicPlayer = null;
+    var isMuted = false;
+
+    // Initialize YouTube IFrame API
+    function initMusicPlayer() {
+        // Create YouTube iframe player (hidden)
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+
+    // Called by YouTube API when ready
+    window.onYouTubeIframeAPIReady = function() {
+        musicPlayer = new YT.Player('ytMusicPlayer', {
+            height: '0',
+            width: '0',
+            videoId: '8Ktn2weSyf4',
+            playerVars: {
+                'autoplay': 1,
+                'loop': 1,
+                'playlist': '8Ktn2weSyf4',
+                'controls': 0,
+                'showinfo': 0,
+                'modestbranding': 1,
+                'playsinline': 1
+            },
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    };
+
+    function onPlayerReady(event) {
+        event.target.setVolume(30);
+        event.target.playVideo();
+    }
+
+    // Music toggle button click handler
+    $('#musicToggle').on('click', function() {
+        if (musicPlayer && musicPlayer.getPlayerState) {
+            if (isMuted) {
+                musicPlayer.unMute();
+                musicPlayer.playVideo();
+                $('#musicIcon').removeClass('fa-volume-mute').addClass('fa-volume-up');
+                isMuted = false;
+            } else {
+                musicPlayer.mute();
+                $('#musicIcon').removeClass('fa-volume-up').addClass('fa-volume-mute');
+                isMuted = true;
+            }
+        }
+    });
+
+    // Initialize music player on page load
+    initMusicPlayer();
+
 })(jQuery);
