@@ -119,6 +119,28 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Navigation Container - Flex layout */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navigation Center */
+.nav-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Navigation Right Side */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .nav-logo {
     width: 45px;
     height: 45px;
@@ -145,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-secondary);
     cursor: pointer;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     transition: var(--transition-fast);
 }
 
@@ -174,6 +196,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 6px;
     z-index: 1001;
     transition: var(--transition-normal);
+    flex-shrink: 0;
 }
 
 .hamburger-icon {
@@ -686,6 +709,29 @@ h1, h2, h3, h4, h5, h6 {
 .profiles-section {
     padding: 5rem 0;
     background: var(--dark-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Blurred Background for Profiles Section */
+.profiles-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/details-background.png') center center no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    opacity: 0.15;
+    z-index: 0;
+    transform: scale(1.1);
+}
+
+.profiles-section > .container {
+    position: relative;
+    z-index: 1;
 }
 
 .profiles-card,
@@ -1097,6 +1143,28 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
 }
 
+/* Form Messages */
+.form-message {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    animation: fadeInUp 0.3s ease;
+}
+
+.form-message-success {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--accent-color);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.form-message-error {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
 /* =============================================
    Footer
    ============================================= */
@@ -1178,19 +1246,23 @@ a.back-to-top:hover {
    Responsive Styles
    ============================================= */
 @media (min-width: 992px) {
-    .hamburger-menu {
-        display: none;
-    }
-
     .offcanvas-collapse {
         position: static;
         visibility: visible;
         background: transparent;
         padding: 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
     }
 
     .navbar .navbar-nav {
         flex-direction: row;
+    }
+
+    .nav-center {
+        display: flex;
+        gap: 0.5rem;
     }
 }
 
@@ -1217,6 +1289,49 @@ a.back-to-top:hover {
 
     .profiles-card {
         margin-bottom: 2rem;
+    }
+
+    /* Mobile Navigation */
+    .nav-container {
+        position: relative;
+    }
+
+    .offcanvas-collapse {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 2rem;
+        background: var(--darker-bg);
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .offcanvas-collapse.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-center {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.5rem !important;
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
     }
 }
 
