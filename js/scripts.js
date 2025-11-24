@@ -30,7 +30,7 @@
     });
 
     // Hamburger menu toggle
-    $('[data-toggle="offcanvas"]').on('click', function() {
+    $('.hamburger-menu').on('click', function() {
         $('.offcanvas-collapse').toggleClass('open');
         $(this).toggleClass('active');
     });
